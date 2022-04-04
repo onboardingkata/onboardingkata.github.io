@@ -1,7 +1,6 @@
 ---
 title: Metodología Onboarding
 parent: METODOLOGIA
-has_children: true
 nav_order: 1
 ---
 
