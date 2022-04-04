@@ -1,7 +1,6 @@
 ---
 title: Planeación
 parent: METODOLOGIA
-has_children: true
 nav_order: 3
 ---
 
@@ -21,7 +20,7 @@ El equipo designado para la ejecución del Sprint 0 deberá tomar en cuenta lo s
 Cabe mencionar que las actividades y agenda deberán actualizarse conforme se avance en los talleres de entendimiento.
 
 
-<b>Importante mencionar que existe un apartado en el presente documento que fungirá como guía para poder determinar una buena propuesta para MVP.</b>
+Importante mencionar que existe un apartado en el presente documento que fungirá como guía para poder determinar una buena propuesta para MVP.
 
 
 Esta etapa seguirá corriendo en paralelo al diseño y concluye con la entrega de los artefactos mencionados en el punto 3 del presente documento que demarcará el cierre del Sprint 0. 

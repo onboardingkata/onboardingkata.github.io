@@ -23,4 +23,4 @@ También será el input para poder identificar riesgos y nuevas funcionalidades 
 
 Durante esta etapa deberá identificarse, el alcance global del proyecto, los objetivos específicos, los roles y responsabilidades, así como los niveles de escalamiento y participación de los interesados de ambas partes (KataSoftware y del Cliente).
 
-> Esta etapa se concluye cuando se da formalmente el Kick off del proyecto.
+Esta etapa se concluye cuando se da formalmente el Kick off del proyecto.

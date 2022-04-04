@@ -1,7 +1,6 @@
 ---
 title: Diseño
 parent: METODOLOGIA
-has_children: true
 nav_order: 4
 ---
 
@@ -17,4 +16,4 @@ En esta etapa se utilizarán los artefactos detallados en el numeral 3 del prese
 * Presentación de los artefactos a todos los interesados (concluidos)
 
 
-> Esta etapa concluye cuando es aprobado el Backlog priorizado y se da el VoBo de las Historia de Usuario detalladas para el Sprint 1; asimismo deberán entregarse por el medio que se defina, todos los artefactos del numeral 3 con lo que también se da por concluido el Sprint 0.  
+Esta etapa concluye cuando es aprobado el Backlog priorizado y se da el VoBo de las Historia de Usuario detalladas para el Sprint 1; asimismo deberán entregarse por el medio que se defina, todos los artefactos del numeral 3 con lo que también se da por concluido el Sprint 0.  
