@@ -33,11 +33,11 @@ En el reporte de supervisón se cuenta con una capa especial, para mostrar la in
 
 Esta capa al igual que las demás se encuentra en la parte superior del mapa
 
-![](.attachments/25395219.png)
+![](/assets/25395219.png)
 
-En esta se debe seleccionar la opción "*Puntos de información de usuario"*identificado con este icono ![](.attachments/25395220.png), por defecto esta opción esta activa y en el mapa podrá verlo así
+En esta se debe seleccionar la opción "*Puntos de información de usuario"*identificado con este icono ![](/assets/25395220.png), por defecto esta opción esta activa y en el mapa podrá verlo así
 
-![](.attachments/25395222.png)
+![](/assets/25395222.png)
 
 ##### Posibles usos/ Casos de negocio:
 
@@ -53,9 +53,9 @@ Ninguna conocida
  
 ## Attachments:
  
-![](.attachments/bullet_blue.gif) [Barra capas.png](.attachments/25395219.png) (image/png)   
- ![](.attachments/bullet_blue.gif) [image2015-9-9 15:24:19.png](.attachments/25395220.png) (image/png)   
- ![](.attachments/bullet_blue.gif) [image2015-9-9 15:25:31.png](.attachments/25395221.png) (image/png)   
- ![](.attachments/bullet_blue.gif) [image2015-9-9 15:25:50.png](.attachments/25395222.png) (image/png)
+![](/assets/bullet_blue.gif) [Barra capas.png](/assets/25395219.png) (image/png)   
+ ![](/assets/bullet_blue.gif) [image2015-9-9 15:24:19.png](/assets/25395220.png) (image/png)   
+ ![](/assets/bullet_blue.gif) [image2015-9-9 15:25:31.png](/assets/25395221.png) (image/png)   
+ ![](/assets/bullet_blue.gif) [image2015-9-9 15:25:50.png](/assets/25395222.png) (image/png)
    
 _Migrate on Thursday, 23 April 2020 09:32 with [Atlassian2DevOps Tool](https://github.com/etgregor/atlassian2devops)._

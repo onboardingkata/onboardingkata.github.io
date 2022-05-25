@@ -18,7 +18,7 @@ Requerimientos de mantenimiento y piezas nuevas
 | --- | --- | --- |
  
 No files shared here yet.
- - Drag and drop to upload or browse for files ![](.attachments/wait.gif)
+ - Drag and drop to upload or browse for files ![](/assets/wait.gif)
  <form method="POST" class="plugin_attachments_uploadform aui hidden" action="/wiki/pages/plugins/attachments/doattachfile.action?pageId=9109725" enctype="multipart/form-data"> <input type="hidden" name="atl_token" value="${xsrfTokenGenerator.generateToken($req)}"> <div class="field-group"> <label>Upload file</label> <input type="file" name="file_0" size="30"> </div> <div class="field-group"> <label>File description</label> <input type="text" class="blank-search text" name="comment_0" size="20" placeholder="Comment"> <input type="hidden" name="labels" value="$macroParams.labels"> </div> <div class="field-group"> <input type="submit" class="submit aui-button" name="confirm" value="Upload"> </div> <iframe class="plugin_attachments_uploadiframe hidden" name="pfsg78syiNCuSRzaPzg2xeyKVlPJpkl6Lf4WItFfKpAiXXxwDSQJFRmqv7a7fOou" src=""></iframe> </form>
    
 _Migrate on Thursday, 23 April 2020 09:32 with [Atlassian2DevOps Tool](https://github.com/etgregor/atlassian2devops)._
