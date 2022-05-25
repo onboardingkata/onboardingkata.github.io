@@ -1,0 +1,14 @@
+<Coleccion>
+	<NewOrder id="EJEMPLO1" type="huella_enrola" version="1.0" userName="loginUser" priority="1" assignDate="01/15/2014 14:00:00" expirationDate="01/31/2014 14:00:00" cancellationDate="01/25/2014 14:00:00">
+		<parametros>
+			<parametro llave="Calle" valor="" />
+			<parametro llave="Ciudad" valor="" />
+			<parametro llave="CodigoPostal" valor="" />
+			<parametro llave="Colonia" valor="" />
+			<parametro llave="Estado" valor="" />
+			<parametro llave="latitude" valor="" />
+			<parametro llave="longitude" valor="" />
+			<parametro llave="Municipio" valor="" />
+			<parametro llave="Nombre" valor="" /></parametros>
+	</NewOrder>
+</Coleccion>
