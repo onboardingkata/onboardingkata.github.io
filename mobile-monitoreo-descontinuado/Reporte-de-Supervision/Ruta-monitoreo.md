@@ -1,0 +1,17 @@
+#   Formiik Documentation : Ruta (monitoreo)
+ 
+
+## La ruta está conformada por 2 partes: 
+
+|  <ol><li><strong>Órdenes programadas (sin respuesta)</strong> <p class="p1"><span class="s1">Si se quiere ver la ruta planeada las órdenes deben tener coordenadas al momento de asignarlas en Formiik, es decir, el cliente debe mandarnos las coordenadas, si las coordenadas las calcula Android la ruta se verá hasta que la nube tenga la respuesta de la orden. </span></p><p class="p1"><span class="s1">Si el cliente no manda las coordenadas, éstas se pueden calcular en la nube con el servicio de &quot;<a href="#" rel="nofollow">Use GeoCoding</a>&quot; y &quot;<a href="#" rel="nofollow">Auto Geocoding on Map</a>&quot;, </span></p><p class="p1"><span class="s1"><em><strong>NOTA</strong>: Los dos servicios  seguramente tienen un costo extra, para habilitarlos habría que preguntar a Hector.</em></span></p></li><li><strong>Órdenes con respuesta (la respuesta ya está en la nube)</strong> Las órdenes se muestran siempre y cuando se tengan coordenadas válidas.  </li></ol> La ruta del día se pinta **únicamente para el día actual**, en ella se puede ver el listado de órdenes respondidas y las pendientes que están en ruta.  Si una orden no estaba en la ruta pero se respondió en el día automáticamente se muestra como parte de la ruta.  Android envía la ruta al servidor a partir de la versión: 4.2.0, además el envío de la ruta de android a la nube depende de la Configuración Dispositivo, "routeSync"  Android baja la ruta de la nube a partir de la versión 4.4.2, para que la ruta baje al dispositivo debe tener configurado el setting formiikSyncByNotification en la Configuración del Dispositivo  | ![](../../assets/32571609.png) |
+| --- | --- |
+
+## Formas de configurar la ruta del día:
+
+
+
+|   | **Configuración manual desde android** | **Optimización de ruta desde android** | **optimización de ruta en web**  | **Configuración de ruta desde asignación manual en Web.**  |
+| **version** |   |   | (En la parte de responder órdenes) a partir de la version 3.5.1 |   |
+| **pasos** | <ul><li>En el tab de &quot;Todas&quot;</li><li>seleccionar la opción enviar a ruta o</li><li>seleccionar las que estarán en ruta marcando el cuadro de selección</li></ul> | <ul><li><p class="_mce_tagged_br">En el tab &quot;Ruta&quot;</p></li><li><p class="_mce_tagged_br">seleccionar la opción optimizar ruta</p></li></ul> | <ul><li><p class="_mce_tagged_br">Ingresar en la sección de órdenes\responder\asignadas</p></li><li><p class="_mce_tagged_br">Después de que ya se hayan puesto ordenes en ruta</p></li><li>Revisar que el navegador permita enviar la ubicación</li><li>Al cambiarnos al listado de ruta se mostrará el boton &quot;Optimizar ruta&quot;</li><li>Después de presionarlo acomoda las órdenes y trazara la ruta considerando la ubicación actual del operador</li></ul> | <ul><li><p class="_mce_tagged_br">Ingresar en la sección de órdenes\responder\asignadas</p></li><li><p class="_mce_tagged_br">seleccionar las órdenes a agregar a ruta con el cuadro de selección</p></li><li><p class="_mce_tagged_br">y al cambiar a la sección de ruta solo estarán aquellas órdenes en ruta</p></li></ul> |
+|   | ![](../../assets/32571614.png) | ![](../../assets/32571613.png) |   | ![](../../assets/32571612.png) |
+ 
