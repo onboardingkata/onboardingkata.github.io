@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2484,17 +2484,47 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="varrepohelpersave">varRepoHelper.save</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-181" aria-controls="tab-181" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-182" aria-controls="tab-182" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-183" aria-controls="tab-183" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-184" aria-controls="tab-184" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-181"><p>Permite almacenar una variable en el cache de engine para el tenant, el guardado de la variable tiene una vigencia.</p></div><div role="tabpanel" class="tab-pane " id="tab-182"><ul><li>variableName &#x2013; Nombre de la variable como se estar&#xE1; guardando en el cache
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-642" aria-controls="tab-642" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-643" aria-controls="tab-643" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-644" aria-controls="tab-644" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-645" aria-controls="tab-645" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-642"><p>Permite almacenar una variable en el cache de engine para el tenant, el guardado de la variable tiene una vigencia.</p></div><div role="tabpanel" class="tab-pane " id="tab-643"><ul><li>variableName &#x2013; Nombre de la variable como se estar&#xE1; guardando en el cache
 </li>
 <li>variableValue &#x2013; Valor que se desea almacenar.
 </li>
 <li>Duration &#x2013; Vigencia en minutos de la variable, despu&#xE9;s de la vigencia ya no se retornara el valor.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-183"><ul><li>No hay respuesta.
+</div><div role="tabpanel" class="tab-pane " id="tab-644"><ul><li>No hay respuesta.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-184"><pre><code>await varRepoHelper.save(&apos;VarTestDemo&apos;, &quot;123&quot;, 1);</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-645"><pre><code>await varRepoHelper.save(&apos;VarTestDemo&apos;, &quot;123&quot;, 1);</code></pre>
 </div></div></p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(104,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(104,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2537,7 +2567,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"varRepoHelper.save","level":"5.1.47","depth":2,"next":{"title":"await varRepoHelper.getVariable","level":"5.1.48","depth":2,"path":"recursos-tecnicos/helpers/await-varrepohelper.getvariable.md","ref":"recursos-tecnicos/helpers/await-varrepohelper.getvariable.md","articles":[]},"previous":{"title":"associatePdfHelper.Associate","level":"5.1.46","depth":2,"path":"recursos-tecnicos/helpers/associatepdfhelper.associate.md","ref":"recursos-tecnicos/helpers/associatepdfhelper.associate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/varrepohelper.save.md","mtime":"2022-03-30T23:08:29.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"varRepoHelper.save","level":"5.1.47","depth":2,"next":{"title":"await varRepoHelper.getVariable","level":"5.1.48","depth":2,"path":"recursos-tecnicos/helpers/await-varrepohelper.getvariable.md","ref":"recursos-tecnicos/helpers/await-varrepohelper.getvariable.md","articles":[]},"previous":{"title":"associatePdfHelper.Associate","level":"5.1.46","depth":2,"path":"recursos-tecnicos/helpers/associatepdfhelper.associate.md","ref":"recursos-tecnicos/helpers/associatepdfhelper.associate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/varrepohelper.save.md","mtime":"2022-06-27T17:30:40.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

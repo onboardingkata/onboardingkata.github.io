@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2484,21 +2484,52 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="getbyindexes">GetByIndexes</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-66" aria-controls="tab-66" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-67" aria-controls="tab-67" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-68" aria-controls="tab-68" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-69" aria-controls="tab-69" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-66"><p>Permite obtener las filas con los indices que se mandan como par&#xE1;metro dentro del vector (formedit)</p></div><div role="tabpanel" class="tab-pane " id="tab-67"><ul><li>containerId - Identificador del contenedor donde se encuentra el vector (FormEdit)
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-935" aria-controls="tab-935" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-936" aria-controls="tab-936" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-937" aria-controls="tab-937" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-938" aria-controls="tab-938" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-935"><p>Permite obtener las filas con los indices que se mandan como par&#xE1;metro dentro del vector (formedit)</p></div><div role="tabpanel" class="tab-pane " id="tab-936"><ul><li>containerId - Identificador del contenedor donde se encuentra el vector (FormEdit)
 </li>
 <li>formEditName &#x2013; Nombre del dato vector (FormEdit).
 </li>
 <li>indexes &#x2013; Arreglo con los &#xED;ndices que se desean obtener.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-68"><p>&#x2022;    Arreglo de objetos. Se retornara un arreglo de objetos con las filas solicitadas siguiente estructura.</p><pre><code class="lang-[">{
+</div><div role="tabpanel" class="tab-pane " id="tab-937"><p>&#x2022;    Arreglo de objetos. Se retornara un arreglo de objetos con las filas solicitadas siguiente estructura.</p><pre><code class="lang-[">{
   &quot;1&quot;:{}
 },
 {
   &quot;3&quot;:{}
 }
 ]</code></pre>
-<p>Donde el numero representa el &#xED;ndice solicitado</p></div><div role="tabpanel" class="tab-pane " id="tab-69"><pre><code>var vectorFE = GetByIndexes(&quot;IdContendor&quot;, &quot;TableFE&quot;, [1]);</code></pre>
+<p>Donde el numero representa el &#xED;ndice solicitado</p></div><div role="tabpanel" class="tab-pane " id="tab-938"><pre><code>var vectorFE = GetByIndexes(&quot;IdContendor&quot;, &quot;TableFE&quot;, [1]);</code></pre>
 </div></div></p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(62,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(62,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
+
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
                                 
                                 </section>
@@ -2542,7 +2573,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GetByIndexes","level":"5.1.5","depth":2,"next":{"title":"Push","level":"5.1.6","depth":2,"path":"recursos-tecnicos/helpers/push.md","ref":"recursos-tecnicos/helpers/push.md","articles":[]},"previous":{"title":"GetAll","level":"5.1.4","depth":2,"path":"recursos-tecnicos/helpers/getall.md","ref":"recursos-tecnicos/helpers/getall.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/getbyindexes.md","mtime":"2022-03-30T23:14:52.295Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GetByIndexes","level":"5.1.5","depth":2,"next":{"title":"Push","level":"5.1.6","depth":2,"path":"recursos-tecnicos/helpers/push.md","ref":"recursos-tecnicos/helpers/push.md","articles":[]},"previous":{"title":"GetAll","level":"5.1.4","depth":2,"path":"recursos-tecnicos/helpers/getall.md","ref":"recursos-tecnicos/helpers/getall.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/getbyindexes.md","mtime":"2022-06-27T17:08:33.412Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

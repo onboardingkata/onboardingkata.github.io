@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="./">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="./">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2493,7 +2493,37 @@
 <li>Define los estados del producto en base al negocio. El negocio va a requerir monitorear el avance de las tareas, define los estados que ellos van a querer monitorear, estos estados son f&#xE1;ciles de identificar ya que van de la mano con el flujo de negocio, ejemplo, Prospectando, Validando, Comit&#xE9;, Tesorer&#xED;a, Desembolsada o Cancelada.</li>
 <li>Valida tus estados. La finalidad de los estados es dar seguimiento al flujo, todos los estados deben tener una condici&#xF3;n para entrar a ese estado, por ejemplo, definimos, estado comit&#xE9;, debes realizarte la pregunta, &#xBF;C&#xF3;mo llego a comit&#xE9;?, si no te puedes responder es que tu estado est&#xE1; mal, com&#xFA;nmente la respuesta seria, cuando la tarea evaluaci&#xF3;n de documentos digitales esta con estado aprobado.</li>
 </ol>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(23,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(23,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2536,7 +2566,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Diagrama de Estados","level":"4.1.2","depth":2,"next":{"title":"Matriz de asignación","level":"4.1.3","depth":2,"path":"buenas-practicas/analisis/matriz-de-asignacion.md","ref":"buenas-practicas/analisis/matriz-de-asignacion.md","articles":[]},"previous":{"title":"Diagrama de Producto","level":"4.1.1","depth":2,"path":"buenas-practicas/analisis/diagrama-de-producto.md","ref":"buenas-practicas/analisis/diagrama-de-producto.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"buenas-practicas/analisis/diagrama-de-estados.md","mtime":"2022-03-30T20:06:38.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Diagrama de Estados","level":"4.1.2","depth":2,"next":{"title":"Matriz de asignación","level":"4.1.3","depth":2,"path":"buenas-practicas/analisis/matriz-de-asignacion.md","ref":"buenas-practicas/analisis/matriz-de-asignacion.md","articles":[]},"previous":{"title":"Diagrama de Producto","level":"4.1.1","depth":2,"path":"buenas-practicas/analisis/diagrama-de-producto.md","ref":"buenas-practicas/analisis/diagrama-de-producto.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"buenas-practicas/analisis/diagrama-de-estados.md","mtime":"2022-06-27T16:32:25.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

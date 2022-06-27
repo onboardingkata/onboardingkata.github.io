@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2484,9 +2484,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="folderhelpergetfullfolderfromcurrentagent">folderHelper.GetFullFolderFromCurrentAgent</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-242" aria-controls="tab-242" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-243" aria-controls="tab-243" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-244" aria-controls="tab-244" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-245" aria-controls="tab-245" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-242"><p>Permite obtener la informaci&#xF3;n del folder y agente del usuario que esta firmado en el sistema.</p></div><div role="tabpanel" class="tab-pane " id="tab-243"><ul><li>No recibe parmetros,
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-923" aria-controls="tab-923" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-924" aria-controls="tab-924" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-925" aria-controls="tab-925" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-926" aria-controls="tab-926" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-923"><p>Permite obtener la informaci&#xF3;n del folder y agente del usuario que esta firmado en el sistema.</p></div><div role="tabpanel" class="tab-pane " id="tab-924"><ul><li>No recibe parmetros,
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-244"><ul><li>Retorna el objeto compuesto por el folder y agente del usuario que esta firmado.
+</div><div role="tabpanel" class="tab-pane " id="tab-925"><ul><li>Retorna el objeto compuesto por el folder y agente del usuario que esta firmado.
 <pre><code>{
 isDefaultFolder: false,
 folderId: &apos;E318295C-86CE-4AD3-A388-1F41BA20334A&apos;,
@@ -2531,9 +2531,39 @@ nodeType: 0,
 folderName: &apos;QA6&apos;
 }</code></pre>
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-245"><pre><code>var misDatos=folderHelper.GetFullFolderFromCurrentAgent();</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-926"><pre><code>var misDatos=folderHelper.GetFullFolderFromCurrentAgent();</code></pre>
 </div></div></p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(89,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(89,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2576,7 +2606,7 @@ folderName: &apos;QA6&apos;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"folderHelper.GetFullFolderFromCurrentAgent","level":"5.1.32","depth":2,"next":{"title":"folderHelper.GetFullFolderFromFolderId","level":"5.1.33","depth":2,"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromfolderid.md","ref":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromfolderid.md","articles":[]},"previous":{"title":"folderHelper.GetFullFolderFromAgentId","level":"5.1.31","depth":2,"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromagentid.md","ref":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromagentid.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromcurrentagent.md","mtime":"2022-03-30T22:57:24.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"folderHelper.GetFullFolderFromCurrentAgent","level":"5.1.32","depth":2,"next":{"title":"folderHelper.GetFullFolderFromFolderId","level":"5.1.33","depth":2,"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromfolderid.md","ref":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromfolderid.md","articles":[]},"previous":{"title":"folderHelper.GetFullFolderFromAgentId","level":"5.1.31","depth":2,"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromagentid.md","ref":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromagentid.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/folderhelper.getfullfolderfromcurrentagent.md","mtime":"2022-06-27T17:19:16.512Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

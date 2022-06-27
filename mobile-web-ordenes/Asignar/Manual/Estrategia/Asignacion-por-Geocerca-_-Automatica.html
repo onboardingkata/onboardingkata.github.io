@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2598,7 +2598,37 @@
 <pre><code class="lang-js">{<span class="hljs-string">&quot;UsersAndOrders&quot;</span>: [{        <span class="hljs-string">&quot;UserId&quot;</span>: <span class="hljs-string">&quot;77553cda-472b-4ec5-afa7-2b6b65d5f083&quot;</span>,        <span class="hljs-string">&quot;Orders&quot;</span>: [<span class="hljs-string">&quot;7ba8f188-4a59-4962-81b0-09c511a1135f&quot;</span>, <span class="hljs-string">&quot;31db0b1f-0b85-4bdd-afec-49d0efdee357&quot;</span>, <span class="hljs-string">&quot;05206348-61d8-472b-badf-60be36a18bc9&quot;</span>, <span class="hljs-string">&quot;1245404d-11b7-4079-ac18-98bf2d2fb16c&quot;</span>, <span class="hljs-string">&quot;e7dc3f5d-f70f-41b4-b059-bf6a7d31c2fb&quot;</span>]    }],<span class="hljs-string">&quot;UnasignedOrder&quot;</span>: [{        <span class="hljs-string">&quot;IdWorkOrder&quot;</span>: <span class="hljs-string">&quot;a7fd9abc-f521-4e52-ae34-6c409fda417f&quot;</span>,        <span class="hljs-string">&quot;ExternalId&quot;</span>: <span class="hljs-literal">null</span>,        <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;La orden no se pudo ubicar en alguna geocerca&quot;</span>    }, {        <span class="hljs-string">&quot;IdWorkOrder&quot;</span>: <span class="hljs-string">&quot;902fc2b5-6452-4168-b3fc-f5e6789a1a64&quot;</span>,        <span class="hljs-string">&quot;ExternalId&quot;</span>: <span class="hljs-literal">null</span>,        <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;La orden no se pudo ubicar en alguna geocerca&quot;</span>    }] }
 </code></pre>
 <p>Nota, UnasignedOrder, se utiliza cuando se usa la estrategia en asignaci&#xF3;n al crear una orden. Se regresa una listado de &#xF3;rdenes con el mensaje indicando la raz&#xF3;n del fracaso en la asignaci&#xF3;n.</p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(113,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(113,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2641,7 +2671,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Asignación por Geocerca _ Automática","level":"6.1.5","depth":2,"next":{"title":"Clustering","level":"6.1.6","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","articles":[]},"previous":{"title":"Asignación por Geocerca ","level":"6.1.4","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","mtime":"2022-05-25T21:45:03.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Asignación por Geocerca _ Automática","level":"6.1.5","depth":2,"next":{"title":"Clustering","level":"6.1.6","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","articles":[]},"previous":{"title":"Asignación por Geocerca ","level":"6.1.4","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","mtime":"2022-06-27T17:49:55.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

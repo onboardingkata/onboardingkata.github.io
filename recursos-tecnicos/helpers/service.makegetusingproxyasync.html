@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2484,17 +2484,47 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="servicemakegetusingproxyasync">service.MakeGetUsingProxyAsync</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-35" aria-controls="tab-35" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-36" aria-controls="tab-36" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-37" aria-controls="tab-37" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-38" aria-controls="tab-38" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-35"><p>Realiza una llamada http GET utilizando el proxy que tenga la m&#xE1;quina de estados en la configuraci&#xF3;n.</p></div><div role="tabpanel" class="tab-pane " id="tab-36"><ul><li>url &#x2013; URL del servicio que se quiere consumir.
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-957" aria-controls="tab-957" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-958" aria-controls="tab-958" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-959" aria-controls="tab-959" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-960" aria-controls="tab-960" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-957"><p>Realiza una llamada http GET utilizando el proxy que tenga la m&#xE1;quina de estados en la configuraci&#xF3;n.</p></div><div role="tabpanel" class="tab-pane " id="tab-958"><ul><li>url &#x2013; URL del servicio que se quiere consumir.
 </li>
 <li>Headers &#x2013; Encabezado para realizar la llamada http.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-37"><ul><li>Si la respuesta por parte del servicio es JSON se retorna un objeto.
+</div><div role="tabpanel" class="tab-pane " id="tab-959"><ul><li>Si la respuesta por parte del servicio es JSON se retorna un objeto.
 </li>
 <li>Si la respuesta por parte del servicio no es JSON se retorna la respuesta en modo texto.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-38"><pre><code>var htmlResumen = service. MakeGetUsingProxyAsync (&quot;https://www.misitio.com/reporte/12&quot;, { &#x201C;token&#x201D;:&#x201D;abcd&#x2026;&#x201D;});</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-960"><pre><code>var htmlResumen = service. MakeGetUsingProxyAsync (&quot;https://www.misitio.com/reporte/12&quot;, { &#x201C;token&#x201D;:&#x201D;abcd&#x2026;&#x201D;});</code></pre>
 </div></div></p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(70,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(70,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2537,7 +2567,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"service.MakeGetUsingProxyAsync","level":"5.1.13","depth":2,"next":{"title":"service.MakePost","level":"5.1.14","depth":2,"path":"recursos-tecnicos/helpers/service.makepost.md","ref":"recursos-tecnicos/helpers/service.makepost.md","articles":[]},"previous":{"title":"service.MakePostUsingProxyAsync","level":"5.1.12","depth":2,"path":"recursos-tecnicos/helpers/service.makepostusingproxyasync.md","ref":"recursos-tecnicos/helpers/service.makepostusingproxyasync.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/service.makegetusingproxyasync.md","mtime":"2022-03-30T22:38:19.572Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"service.MakeGetUsingProxyAsync","level":"5.1.13","depth":2,"next":{"title":"service.MakePost","level":"5.1.14","depth":2,"path":"recursos-tecnicos/helpers/service.makepost.md","ref":"recursos-tecnicos/helpers/service.makepost.md","articles":[]},"previous":{"title":"service.MakePostUsingProxyAsync","level":"5.1.12","depth":2,"path":"recursos-tecnicos/helpers/service.makepostusingproxyasync.md","ref":"recursos-tecnicos/helpers/service.makepostusingproxyasync.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/service.makegetusingproxyasync.md","mtime":"2022-06-27T17:10:53.374Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2484,13 +2484,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="await-instancehelpersearch">await instanceHelper.search</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-808" aria-controls="tab-808" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-809" aria-controls="tab-809" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-810" aria-controls="tab-810" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-811" aria-controls="tab-811" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-808"><p>Devuelve una colecci&#xF3;n de Instancias de acuerdo a los par&#xE1;metros que ingresen a la funci&#xF3;n.</p></div><div role="tabpanel" class="tab-pane " id="tab-809"><ul><li>filters. Es una colecci&#xF3;n de valores y nombres de datos que indican las coincidencias esperadas dentro de los datos pertenecientes a los containers.
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-83" aria-controls="tab-83" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-84" aria-controls="tab-84" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-85" aria-controls="tab-85" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-86" aria-controls="tab-86" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-83"><p>Devuelve una colecci&#xF3;n de Instancias de acuerdo a los par&#xE1;metros que ingresen a la funci&#xF3;n.</p></div><div role="tabpanel" class="tab-pane " id="tab-84"><ul><li>filters. Es una colecci&#xF3;n de valores y nombres de datos que indican las coincidencias esperadas dentro de los datos pertenecientes a los containers.
 </li>
 <li>sortFields (opcional). Es una colecci&#xF3;n que indica los campos por los que se ordenar&#xE1;n los resultados, y el sentido del ordenamiento por cada uno (ascendente o descendente).
 </li>
 <li>limit (opcional). Es un dato num&#xE9;rico que delimita el tama&#xF1;o de la colecci&#xF3;n resultado. 
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-810"></div><div role="tabpanel" class="tab-pane " id="tab-811"><p>Ejemplo</p><pre><code>instanceHelper.search({
+</div><div role="tabpanel" class="tab-pane " id="tab-85"></div><div role="tabpanel" class="tab-pane " id="tab-86"><p>Ejemplo</p><pre><code>instanceHelper.search({
     &quot;filters&quot;: [
         {
             &quot;containerId&quot;: &quot;ED64A5F1-66C9-4262-B65A-A4FFA6F38F27&quot;,
@@ -2542,7 +2542,37 @@
     }
 ]</code></pre>
 </div></div></p>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(107,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(107,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2585,7 +2615,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"await instanceHelper.search","level":"5.1.50","depth":2,"next":{"title":"Asignar ","level":"6.1","depth":1,"path":"mobile-web-ordenes/Asignar.md","ref":"mobile-web-ordenes/Asignar.md","articles":[{"title":"Asignación por servicio (SOAP) ","level":"6.1.1","depth":2,"path":"mobile-web-ordenes/Asignar/Asignacion-por-servicio-SOAP.md","ref":"mobile-web-ordenes/Asignar/Asignacion-por-servicio-SOAP.md","articles":[]},{"title":"Manual ","level":"6.1.2","depth":2,"path":"mobile-web-ordenes/Asignar/Manual.md","ref":"mobile-web-ordenes/Asignar/Manual.md","articles":[]},{"title":"Estrategía ","level":"6.1.3","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia.md","articles":[]},{"title":"Asignación por Geocerca ","level":"6.1.4","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","articles":[]},{"title":"Asignación por Geocerca _ Automática","level":"6.1.5","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","articles":[]},{"title":"Clustering","level":"6.1.6","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","articles":[]},{"title":"Clustering Same Cardinality","level":"6.1.7","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality.md","articles":[]},{"title":"Clustering Same Cardinality Fast","level":"6.1.8","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast.md","articles":[]},{"title":"Clustering Same Cardinality Fast NoOut","level":"6.1.9","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast-NoOut.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast-NoOut.md","articles":[]},{"title":"En paquete ","level":"6.1.10","depth":2,"path":"mobile-web-ordenes/Asignar/En-paquete.md","ref":"mobile-web-ordenes/Asignar/En-paquete.md","articles":[]},{"title":"Solo una ","level":"6.1.11","depth":2,"path":"mobile-web-ordenes/Asignar/Solo-una.md","ref":"mobile-web-ordenes/Asignar/Solo-una.md","articles":[]}]},"previous":{"title":"await xmlToJsonHelper.ParseXml","level":"5.1.49","depth":2,"path":"recursos-tecnicos/helpers/await-xmltojsonhelper.parsexml.md","ref":"recursos-tecnicos/helpers/await-xmltojsonhelper.parsexml.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/await-instancehelper.search.md","mtime":"2022-03-30T23:12:31.877Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"await instanceHelper.search","level":"5.1.50","depth":2,"next":{"title":"Asignar ","level":"6.1","depth":1,"path":"mobile-web-ordenes/Asignar.md","ref":"mobile-web-ordenes/Asignar.md","articles":[{"title":"Asignación por servicio (SOAP) ","level":"6.1.1","depth":2,"path":"mobile-web-ordenes/Asignar/Asignacion-por-servicio-SOAP.md","ref":"mobile-web-ordenes/Asignar/Asignacion-por-servicio-SOAP.md","articles":[]},{"title":"Manual ","level":"6.1.2","depth":2,"path":"mobile-web-ordenes/Asignar/Manual.md","ref":"mobile-web-ordenes/Asignar/Manual.md","articles":[]},{"title":"Estrategía ","level":"6.1.3","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia.md","articles":[]},{"title":"Asignación por Geocerca ","level":"6.1.4","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca.md","articles":[]},{"title":"Asignación por Geocerca _ Automática","level":"6.1.5","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Asignacion-por-Geocerca-_-Automatica.md","articles":[]},{"title":"Clustering","level":"6.1.6","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering.md","articles":[]},{"title":"Clustering Same Cardinality","level":"6.1.7","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality.md","articles":[]},{"title":"Clustering Same Cardinality Fast","level":"6.1.8","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast.md","articles":[]},{"title":"Clustering Same Cardinality Fast NoOut","level":"6.1.9","depth":2,"path":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast-NoOut.md","ref":"mobile-web-ordenes/Asignar/Manual/Estrategia/Clustering-Same-Cardinality-Fast-NoOut.md","articles":[]},{"title":"En paquete ","level":"6.1.10","depth":2,"path":"mobile-web-ordenes/Asignar/En-paquete.md","ref":"mobile-web-ordenes/Asignar/En-paquete.md","articles":[]},{"title":"Solo una ","level":"6.1.11","depth":2,"path":"mobile-web-ordenes/Asignar/Solo-una.md","ref":"mobile-web-ordenes/Asignar/Solo-una.md","articles":[]}]},"previous":{"title":"await xmlToJsonHelper.ParseXml","level":"5.1.49","depth":2,"path":"recursos-tecnicos/helpers/await-xmltojsonhelper.parsexml.md","ref":"recursos-tecnicos/helpers/await-xmltojsonhelper.parsexml.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/await-instancehelper.search.md","mtime":"2022-06-27T17:31:32.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

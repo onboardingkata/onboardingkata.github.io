@@ -382,14 +382,14 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../buenas-practicas/analisis/">
+        <li class="chapter " data-level="4.1" >
             
-                <a href="../buenas-practicas/analisis/">
+                <span>
             
                     
                     ANALISIS
             
-                </a>
+                </span>
             
 
             
@@ -803,14 +803,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+        <li class="chapter " data-level="4.4" >
             
-                <a href="../buenas-practicas/piloto-mvp-y-liberacion-masificacion/">
+                <span>
             
                     
                     PILOTO(MVP) Y LIBERACIÓN(MASIFICACION)
             
-                </a>
+                </span>
             
 
             
@@ -2510,7 +2510,37 @@
 <span class="hljs-keyword">DECLARE</span> @MinDate datetime = <span class="hljs-keyword">DATEADD</span>(<span class="hljs-keyword">MONTH</span>, <span class="hljs-keyword">DATEDIFF</span>(<span class="hljs-keyword">MONTH</span>, <span class="hljs-number">0</span>, @ReportDate), <span class="hljs-number">0</span>) <span class="hljs-keyword">DECLARE</span> @MaxDate datetime = <span class="hljs-keyword">DATEADD</span>(MILLISECOND, <span class="hljs-number">-3</span>,<span class="hljs-keyword">DATEADD</span>(<span class="hljs-keyword">MONTH</span>, <span class="hljs-keyword">DATEDIFF</span>(<span class="hljs-keyword">MONTH</span>, <span class="hljs-number">0</span>, @ReportDate) + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)) <span class="hljs-keyword">declare</span> @CalMonth <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">declare</span> @ClientName <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>)<span class="hljs-keyword">declare</span> @HorasDiferencia <span class="hljs-built_in">int</span> <span class="hljs-keyword">select</span> @HorasDiferencia = <span class="hljs-keyword">convert</span>(<span class="hljs-built_in">int</span> ,valor)*(<span class="hljs-number">-1</span>) <span class="hljs-keyword">from</span> UtilFacturacion <span class="hljs-keyword">where</span> llave =<span class="hljs-string">&apos;horas_diferencia&apos;</span><span class="hljs-keyword">set</span> @CalMonth = <span class="hljs-keyword">CASE</span> <span class="hljs-keyword">MONTH</span>(@MinDate)     <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;1&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Enero&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;2&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Febrero&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;3&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Marzo&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;4&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Abril&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;5&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Mayo&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;6&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Junio&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;7&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Julio&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;8&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Agosto&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;9&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Septiembre&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;10&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Octubre&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;11&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Noviembre&apos;</span>    <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&apos;12&apos;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&apos;Diciembre&apos;</span><span class="hljs-keyword">END</span>     print @HorasDiferenciaselect @ClientName =  ClientName <span class="hljs-keyword">from</span> [dbo].[<span class="hljs-keyword">Client</span>] 
 <span class="hljs-keyword">WHERE</span> idclient = @IdClient print @MinDateprint @MaxDate <span class="hljs-keyword">declare</span> @TablaTem <span class="hljs-keyword">table</span>(TipoAcceso <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>),CalMonth <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>),ClientName <span class="hljs-built_in">varchar</span>(<span class="hljs-number">100</span>),Usuario <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>),Accesos <span class="hljs-built_in">int</span>,UltimoAcceso datetime) <span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> @TablaTemSELECT <span class="hljs-string">&apos;Web&apos;</span>,@CalMonth,@ClientName,OELC.UserName <span class="hljs-keyword">as</span> Usuario, <span class="hljs-keyword">COUNT</span>(idOperatorEvent) Accesos, <span class="hljs-keyword">MAX</span>(<span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,DateTime))  <span class="hljs-keyword">as</span> <span class="hljs-string">&apos;Ultimo Acceso&apos;</span> <span class="hljs-keyword">FROM</span> dbo.OperatorEventLogComplex OELCLEFT <span class="hljs-keyword">JOIN</span> dbo.<span class="hljs-keyword">Client</span> CLI <span class="hljs-keyword">ON</span> OELC.IdClient = CLI.IdClientleft <span class="hljs-keyword">join</span> dbo.[<span class="hljs-keyword">User</span>] U   <span class="hljs-keyword">ON</span> OELC.UserName = U.UserName <span class="hljs-keyword">and</span> U.IdClient = @IdClientWHERE CLI.IdClient = @IdClient        <span class="hljs-keyword">AND</span>    <span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,[DateTime]) &gt;= @Mindate        <span class="hljs-keyword">AND</span> <span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,[DateTime]) &lt;= @Maxdate        <span class="hljs-keyword">AND</span> IdOperatorEventType <span class="hljs-keyword">in</span> (<span class="hljs-string">&apos;00000000-0000-0000-0000-000000000004&apos;</span>)        <span class="hljs-keyword">and</span> OELC.UserName <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> (<span class="hljs-string">&apos;superuser&apos;</span>,<span class="hljs-string">&apos;rbarajas&apos;</span>,<span class="hljs-string">&apos;prueba4&apos;</span>,<span class="hljs-string">&apos;soporte&apos;</span>,<span class="hljs-string">&apos;consultor&apos;</span>,<span class="hljs-string">&apos;desarrollo&apos;</span>,<span class="hljs-string">&apos;desarrollo1&apos;</span>,<span class="hljs-string">&apos;soporte&apos;</span>)        <span class="hljs-keyword">and</span> U.[IdRole] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span>(<span class="hljs-string">&apos;324FE391-CF61-4F5D-8726-6BB248D09B0E&apos;</span>)<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> OELC.UserNameinsert <span class="hljs-keyword">into</span> @TablaTemSELECT <span class="hljs-string">&apos;Mobil&apos;</span>,@CalMonth,@ClientName,OELC.UserName <span class="hljs-keyword">as</span> Usuario, <span class="hljs-keyword">COUNT</span>(idOperatorEvent) Accesos, <span class="hljs-keyword">MAX</span>(<span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,DateTime)) <span class="hljs-keyword">as</span> <span class="hljs-string">&apos;Ultimo Acceso&apos;</span> <span class="hljs-keyword">FROM</span> dbo.OperatorEventLogComplex OELCLEFT <span class="hljs-keyword">JOIN</span> dbo.<span class="hljs-keyword">Client</span> CLI <span class="hljs-keyword">ON</span> OELC.IdClient = CLI.IdClientleft <span class="hljs-keyword">join</span> dbo.[<span class="hljs-keyword">User</span>] U     <span class="hljs-keyword">on</span>   OELC.UserName = U.UserName <span class="hljs-keyword">and</span> U.IdClient = @IdClientWHERE CLI.IdClient = @IdClient        <span class="hljs-keyword">AND</span>    <span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,[DateTime]) &gt;= @Mindate        <span class="hljs-keyword">AND</span> <span class="hljs-keyword">dateadd</span>(hh,@HorasDiferencia,[DateTime]) &lt;= @Maxdate        <span class="hljs-keyword">AND</span> IdOperatorEventType <span class="hljs-keyword">in</span> (<span class="hljs-string">&apos;53690814-E7F6-43AD-9D31-922ACE58B31D&apos;</span>)        <span class="hljs-keyword">and</span> OELC.UserName <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> (<span class="hljs-string">&apos;superuser&apos;</span>,<span class="hljs-string">&apos;rbarajas&apos;</span>,<span class="hljs-string">&apos;prueba4&apos;</span>,<span class="hljs-string">&apos;soporte&apos;</span>,<span class="hljs-string">&apos;consultor&apos;</span>,<span class="hljs-string">&apos;desarrollo&apos;</span>,<span class="hljs-string">&apos;desarrollo1&apos;</span>,<span class="hljs-string">&apos;soporte&apos;</span>)        <span class="hljs-keyword">and</span> U.[IdRole] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span>(<span class="hljs-string">&apos;324FE391-CF61-4F5D-8726-6BB248D09B0E&apos;</span>)        <span class="hljs-keyword">and</span> OELC.UserName <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> (<span class="hljs-keyword">select</span> <span class="hljs-keyword">distinct</span> Usuario <span class="hljs-keyword">from</span> @TablaTem <span class="hljs-keyword">where</span> TipoAcceso =<span class="hljs-string">&apos;Web&apos;</span>)<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> OELC.UserName <span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> @TablaTem <span class="hljs-keyword">END</span>
 </code></pre>
+<p><br>
+<br></p>
+<table>
+   <tr>
+      <td width="80%">
+        <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
+      </td>
+      <td width="10%" align="center">
+        <img src="../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(156,&apos;Aprobar&apos;)">
+      </td>
+      <td width="10%" align="center">
+         <img src="../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(156,&apos;Rechazar&apos;)">
+      </td>
+   </tr>
+</table>
 
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opini&#xF3;n enviada</h5>
+      </div>
+      <div class="modal-body">
+        Gracias por compartirnos tu opini&#xF3;n, nos ser&#xE1; de mucha utilidad para mejorar el contenido.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
                                 
                                 </section>
                             
@@ -2553,7 +2583,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Reporte de Usuarios","level":"6.5.16","depth":2,"next":{"title":"Reporte de Órdenes","level":"6.5.17","depth":2,"path":"mobile-web-monitoreo/Reporte-de-Ordenes.md","ref":"mobile-web-monitoreo/Reporte-de-Ordenes.md","articles":[]},"previous":{"title":"Reporte de Tiempos","level":"6.5.15","depth":2,"path":"mobile-web-monitoreo/Reporte-de-Tiempos.md","ref":"mobile-web-monitoreo/Reporte-de-Tiempos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mobile-web-monitoreo/Reporte-de-Usuarios.md","mtime":"2022-05-26T16:08:05.030Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-24T22:38:26.573Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reporte de Usuarios","level":"6.5.16","depth":2,"next":{"title":"Reporte de Órdenes","level":"6.5.17","depth":2,"path":"mobile-web-monitoreo/Reporte-de-Ordenes.md","ref":"mobile-web-monitoreo/Reporte-de-Ordenes.md","articles":[]},"previous":{"title":"Reporte de Tiempos","level":"6.5.15","depth":2,"path":"mobile-web-monitoreo/Reporte-de-Tiempos.md","ref":"mobile-web-monitoreo/Reporte-de-Tiempos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mobile-web-monitoreo/Reporte-de-Usuarios.md","mtime":"2022-06-27T18:59:02.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T22:20:27.753Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
