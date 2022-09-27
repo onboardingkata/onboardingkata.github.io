@@ -740,6 +740,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.2.17" data-path="../../buenas-practicas/construccion/uso-conector-mobile-engine.html">
+            
+                <a href="../../buenas-practicas/construccion/uso-conector-mobile-engine.html">
+            
+                    
+                    Uso del conector Mobile-Engine
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2510,15 +2523,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="savevaluehelper">saveValueHelper</h1>
-<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-789" aria-controls="tab-789" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-790" aria-controls="tab-790" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-791" aria-controls="tab-791" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-792" aria-controls="tab-792" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-789"><p>Permite asignar el valor en un dato de un contenedor, el valor asignado afectara autosave y values</p></div><div role="tabpanel" class="tab-pane " id="tab-790"><ul><li>containerId - Identificador del contenedor donde se encuentra el dato.
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-533" aria-controls="tab-533" role="tab" data-toggle="tab">Descripci&#xF3;n</a></li><li role="presentation" class=""><a href="#tab-534" aria-controls="tab-534" role="tab" data-toggle="tab">Par&#xE1;metros</a></li><li role="presentation" class=""><a href="#tab-535" aria-controls="tab-535" role="tab" data-toggle="tab">Respuesta</a></li><li role="presentation" class=""><a href="#tab-536" aria-controls="tab-536" role="tab" data-toggle="tab">Ejemplo</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-533"><p>Permite asignar el valor en un dato de un contenedor, el valor asignado afectara autosave y values</p></div><div role="tabpanel" class="tab-pane " id="tab-534"><ul><li>containerId - Identificador del contenedor donde se encuentra el dato.
 </li>
 <li>values &#x2013; objeto compuesto con los datos que se van a modificar para el caso de los valores simples la representaci&#xF3;n es llave valor, para el caso de los compuestos debe ser llave valor, donde valor puede ser otra representaci&#xF3;n de tipo llave valor.
 </li></ul>
 <p>Asignaci&#xF3;n simple</p><pre><code>{  &#x201C;Nombre&#x201D; : &#x201C;Valor&#x201D; }</code></pre>
 <p>Asignacion compuesta</p><pre><code>{ &#x201C;Compuesto&#x201D; : {  &#x201C;Nombre&#x201D; : &#x201C;Valor&#x201D; } } </code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-791"><ul><li>No hay respuesta de retorno.
+</div><div role="tabpanel" class="tab-pane " id="tab-535"><ul><li>No hay respuesta de retorno.
 </li></ul>
-</div><div role="tabpanel" class="tab-pane " id="tab-792"><pre><code>await saveValueHelper(&quot;IdContainer&quot;, { &quot;Observacion&quot;: &quot;Valor&quot; });
+</div><div role="tabpanel" class="tab-pane " id="tab-536"><pre><code>await saveValueHelper(&quot;IdContainer&quot;, { &quot;Observacion&quot;: &quot;Valor&quot; });
 await saveValueHelper(&quot;IdContainer&quot;, { HtmlResumen: { Url: &quot;valor&quot; } });</code></pre>
 </div></div></p>
 <p><br>
@@ -2594,7 +2607,7 @@ await saveValueHelper(&quot;IdContainer&quot;, { HtmlResumen: { Url: &quot;valor
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"saveValueHelper","level":"5.2.2","depth":2,"next":{"title":"getContainerCustomStatus","level":"5.2.3","depth":2,"path":"recursos-tecnicos/helpers/getcontainercustomstatus.md","ref":"recursos-tecnicos/helpers/getcontainercustomstatus.md","articles":[]},"previous":{"title":"getValueByFullName","level":"5.2.1","depth":2,"path":"recursos-tecnicos/helpers/getvaluebyfullname.md","ref":"recursos-tecnicos/helpers/getvaluebyfullname.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/savevaluehelper.md","mtime":"2022-06-27T17:07:43.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-01T00:32:17.056Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"saveValueHelper","level":"5.2.2","depth":2,"next":{"title":"getContainerCustomStatus","level":"5.2.3","depth":2,"path":"recursos-tecnicos/helpers/getcontainercustomstatus.md","ref":"recursos-tecnicos/helpers/getcontainercustomstatus.md","articles":[]},"previous":{"title":"getValueByFullName","level":"5.2.1","depth":2,"path":"recursos-tecnicos/helpers/getvaluebyfullname.md","ref":"recursos-tecnicos/helpers/getvaluebyfullname.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursos-tecnicos/helpers/savevaluehelper.md","mtime":"2022-06-27T17:07:43.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-27T22:43:03.537Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
