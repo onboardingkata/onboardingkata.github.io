@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Grupo de variables · GitBook</title>
+        <title>Resguardo de código e sincronización · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="usuarios-y-jerarquia.html" />
+    <link rel="next" href="../patrones-de-implementacion/" />
     
     
-    <link rel="prev" href="tipos-de-datos.html" />
+    <link rel="prev" href="uso-conector-mobile-engine.html" />
     
 
     </head>
@@ -610,7 +610,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.2.7" data-path="grupo-de-variables.html">
+        <li class="chapter " data-level="4.2.7" data-path="grupo-de-variables.html">
             
                 <a href="grupo-de-variables.html">
             
@@ -753,7 +753,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2.18" data-path="configuracion-pipeline.html">
+        <li class="chapter active" data-level="4.2.18" data-path="configuracion-pipeline.html">
             
                 <a href="configuracion-pipeline.html">
             
@@ -2520,7 +2520,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Grupo de variables</a>
+        <a href="../.." >Resguardo de código e sincronización</a>
     </h1>
 </div>
 
@@ -2535,13 +2535,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="grupo-de-variables">Grupo de variables</h1>
-<p>Los grupos de variables nos permiten configurar valores del sistema que utilizaremos en nuestro flujo, estas constantes del sistema nos dar&#xE1;n la flexibilidad de realizar cambios sin necesidad de modificar o versionar el producto, para definir tus variables sigue las siguientes recomendaciones.</p>
+                                <h1 id="resguardo-de-c&#xF3;digo-e-sincronizaci&#xF3;n">Resguardo de c&#xF3;digo e sincronizaci&#xF3;n</h1>
+<p>Por medio de un pipeline y un script en bash se realiza la integraci&#xF3;n de un repositorio de codigo para sincronizarlo con el JSON de Engine para sincronizar el codigo, el uso del repositorio nos permite versionar el codigo y resguardarlo de manera segura.</p>
+<p>El proyecto actual es un ejemplo de como configurar la integraci&#xF3;n continua el cual esta compuesto de dos elementos:</p>
 <ol>
-<li>Identifica que es una variable. Como mencionamos estas variables son como configuraciones del sistema a nivel ambiente que nos permitir&#xE1; consultar el valor al momento de avanzar en el flujo de la solicitud, pero no todo puede ser una variable, las variables como mencionamos son valores fijos que si pueden llegar a cambiar pero no de manera frecuente, por ejemplo el IVA, o un % de un impuesto, o una URL de un servicio, como puedes observar algunos valores van a cambiar por diferentes condiciones, por ejemplo la URL hay una URL desarrollo, otra QA, otra producci&#xF3;n, llevarlo en una variable te ayudara a tener despliegues m&#xE1;s sencillos.</li>
-<li>Agrupaciones inteligentes. En nuestra implementaci&#xF3;n podemos tener distintos tipos de variables a configurar, ejemplo de integraci&#xF3;n o financieras, genera grupos de manera inteligente para que al momento de dar mantenimiento te sea m&#xE1;s f&#xE1;cil ubicar la configuraci&#xF3;n.</li>
-<li>Nombres descriptivos. Nombra a tus variables de manera descriptiva, de esa forma identificaras su funcionalidad en el flujo de trabajo. </li>
+<li>azure-pipelines.yml - Archivo pipeline para configurarlo en devops</li>
+<li>scriptintegracion.sh - Script bash que se encarga de realizar la sincronizaci&#xF3;n con Engine.</li>
 </ol>
+<p>El flujo del script es el siguiente:</p>
+<ol>
+<li>Realiza el login a la plataforma</li>
+<li>Obtiene y almacena el token</li>
+<li>Buscar y obtiene la version mas actualizada</li>
+<li>Se obtiene la definici&#xF3;n del producto y version obtenida</li>
+<li>Se realiza el recorrido de la estructura para reemplazar el codigo.</li>
+<li>Se sincroniza el condigo del producto custom status, encabezados y funciones de asignaci&#xF3;n.</li>
+<li>Se sincronizan las etapas custom status y funciones de asignaci&#xF3;n.</li>
+<li>Se sincronizan los requisitos custom status y funciones de asignaci&#xF3;n.</li>
+<li>Se sincronizan las tareas custom status, funciones de asignaci&#xF3;n y funciones parciales.</li>
+<li>Se manda el JSON con el contenido actualizado a Engine.</li>
+</ol>
+<p>Para el correcto funcionamiento del script considerar lo siguiente.</p>
+<ol>
+<li>El codigo debe estar estructurado en forma de arbol usando los 4 niveles que actualmente Engine soporta, por lo que se deben crear carpetas con el nivel jerarquico necesario.</li>
+<li>Todas las carpetas deben tener el nombre del contenedor cambiando los espacios por - y quitando los textos de, del y la, no deben llevar acentos y deben ser minusculas, ejemplo Formaci&#xF3;n del Grupo se debe llamar formacion-grupo.</li>
+<li>Los niveles de producto, etapa y requisito deben contar con un folder llamado &quot;-&quot; el cual contiene los archivos fuente de las funciones de dicho contenedor</li>
+<li>Los archivos asociados al producto, etapa y requisito deben estar en la carpeta - del nivel asociado</li>
+<li>Los archivos de custom status deben utilizar la siguiente nomemclatura &quot;cambioEstados_<nombrecontenedor>.js&quot;</nombrecontenedor></li>
+<li>Los archivos de headerFunctio deben utilizar la siguiente nomemclatura &quot;encabezado_<nombreheaderfunction>.js&quot;</nombreheaderfunction></li>
+<li>Los archivos de funciones de asignacion editar deben utilizar la siguiente nomenclatura &quot;carpetasEditan<indicestatus><em>_<nombrestatus>.js&quot;, las funciones de asignacion ver deben utilizar la siguiente nonemclatura &quot;carpetasVen<indicestatus></indicestatus></nombrestatus></em><nombrestatus>.js&quot;</nombrestatus></indicestatus></li>
+<li>Los archivos de funciones parciales deben utilizar la siguiente nomenclatura &quot;parcial_<nombrefuncionparcial>.js&quot;</nombrefuncionparcial></li>
+<li>los archivos de las tareas deben estar en la carpeta asociada a la tarea.</li>
+<li>En la estructura no se debe utilizar acentos o espacios.</li>
+</ol>
+<p>Ejemplo de estructura</p>
+<pre><code>01-producto-financiero
+  - (carpeta)
+   cambioEstados_producto.js
+   encabezado_Nombre.js
+  01-etapa
+   - (carpeta)
+    cambioEstados_etapa.js
+   01-requisito
+    - (carpeta)
+     cambioEstados_requisito.js
+    02-tarea
+     cambioEstados_tarea.js
+     carpetasEditan0_pendiente.js
+     parcial_CalcularBono.js
+</code></pre><p>La implementaci&#xF3;n de ejemplo se encuentra en siguiente link (Ejemplo)[<a href="https://mobiik.visualstudio.com/Onboarding%20Area%20Tecnica/_git/PipelienCompleto" target="_blank">https://mobiik.visualstudio.com/Onboarding%20Area%20Tecnica/_git/PipelienCompleto</a>]</p>
 <p><br>
 <br></p>
 <table>
@@ -2550,10 +2592,10 @@
         <b>La informaci&#xF3;n presentada, &#xBF;le fue &#xFA;til?</b>
       </td>
       <td width="10%" align="center">
-        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(37,&apos;Aprobar&apos;)">
+        <img src="../../assets/like.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(174,&apos;Aprobar&apos;)">
       </td>
       <td width="10%" align="center">
-         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(37,&apos;Rechazar&apos;)">
+         <img src="../../assets/dislike.png" alt="Si" height="22" width="22" style="cursor: pointer;" onclick="enviarFeedback(174,&apos;Rechazar&apos;)">
       </td>
    </tr>
 </table>
@@ -2599,12 +2641,12 @@
 
             
                 
-                <a href="tipos-de-datos.html" class="navigation navigation-prev " aria-label="Previous page: Tipos de Datos">
+                <a href="uso-conector-mobile-engine.html" class="navigation navigation-prev " aria-label="Previous page: Uso del conector Mobile-Engine">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="usuarios-y-jerarquia.html" class="navigation navigation-next " aria-label="Next page: Usuarios y Jerarquía">
+                <a href="../patrones-de-implementacion/" class="navigation navigation-next " aria-label="Next page: Patrones de implementacion">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2615,7 +2657,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Grupo de variables","level":"4.2.7","depth":2,"next":{"title":"Usuarios y Jerarquía","level":"4.2.8","depth":2,"path":"buenas-practicas/construccion/usuarios-y-jerarquia.md","ref":"buenas-practicas/construccion/usuarios-y-jerarquia.md","articles":[]},"previous":{"title":"Tipos de Datos","level":"4.2.6","depth":2,"path":"buenas-practicas/construccion/tipos-de-datos.md","ref":"buenas-practicas/construccion/tipos-de-datos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"buenas-practicas/construccion/grupo-de-variables.md","mtime":"2022-06-27T16:47:22.844Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-19T00:19:28.070Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Resguardo de código e sincronización","level":"4.2.18","depth":2,"next":{"title":"Patrones de implementacion","level":"4.3","depth":1,"path":"buenas-practicas/patrones-de-implementacion/README.md","ref":"buenas-practicas/patrones-de-implementacion/README.md","articles":[{"title":"Solo Engine","level":"4.3.1","depth":2,"path":"buenas-practicas/patrones-de-implementacion/solo-engine.md","ref":"buenas-practicas/patrones-de-implementacion/solo-engine.md","articles":[]},{"title":"Mobile y Engine","level":"4.3.2","depth":2,"path":"buenas-practicas/patrones-de-implementacion/mobile-y-engine.md","ref":"buenas-practicas/patrones-de-implementacion/mobile-y-engine.md","articles":[]},{"title":"Front externo y Engine","level":"4.3.3","depth":2,"path":"buenas-practicas/patrones-de-implementacion/front-externo-y-engine.md","ref":"buenas-practicas/patrones-de-implementacion/front-externo-y-engine.md","articles":[]},{"title":"Front Externo, Mobile y Engine","level":"4.3.4","depth":2,"path":"buenas-practicas/patrones-de-implementacion/front-externo-mobile-y-engine.md","ref":"buenas-practicas/patrones-de-implementacion/front-externo-mobile-y-engine.md","articles":[]}]},"previous":{"title":"Uso del conector Mobile-Engine","level":"4.2.17","depth":2,"path":"buenas-practicas/construccion/uso-conector-mobile-engine.md","ref":"buenas-practicas/construccion/uso-conector-mobile-engine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","tabs@git+https://github.com/ifengkou/gitbook-plugin-tabs.git#0.1.2","custom-js-css"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"custom-js-css":{"js":["./mainfunctions.js"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"tabs":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"buenas-practicas/construccion/configuracion-pipeline.md","mtime":"2022-10-19T00:18:43.076Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-19T00:19:28.070Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
